@@ -1,0 +1,603 @@
+    * {
+        font-family: 'Noto Serif HK', serif;
+        margin: 0;
+        padding: 0;
+        /* border: 1px solid black; */
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    h5 {
+        font-size: 45px;
+        word-spacing: 25px;
+    }
+    /* ---------------------------------------whole page------------------------------------------ */
+    
+    .navbar {
+        background-color: transparent;
+        text-align: center;
+    }
+    
+    .empty {
+        display: inline-block;
+        width: 15%;
+        height: 50px;
+    }
+    
+    .list {
+        display: inline-block;
+        width: 69%;
+    }
+    
+    .type {
+        float: left;
+        height: 90px;
+        margin: 5%;
+        padding: 0 0 0 2.5%;
+        line-height: 5%;
+    }
+    
+    .big {
+        font-size: 60px;
+        font-weight: 700;
+    }
+    
+    .small {
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    .heropic {
+        width: 100%;
+        height: 95vh;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(pexels-madison-inouye-1937336.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: white;
+    }
+    
+    .heropic .ani {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    
+    li span {
+        word-spacing: 10px;
+    }
+    
+    @media only screen and (max-width: 1610px) {
+        .type {
+            float: left;
+            height: auto;
+            margin: 5% 4%;
+            padding: 0 0 0 3%;
+            line-height: 5%;
+        }
+    }
+    
+    @media only screen and (max-width: 1185px) {
+        .small {
+            display: none;
+        }
+        .type {
+            margin: 15% 6%;
+        }
+    }
+    
+    @media only screen and (max-width: 1610px) {
+        li span {
+            word-spacing: 0px;
+        }
+    }
+    /* @media only screen and (max-width: 1610px) {
+    li span {
+        word-spacing: 0px;
+    }
+} */
+    /* ---------------------------------------header------------------------------------------ */
+    
+    .heropic h1 {
+        font-size: 80px;
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation: typing 3s steps(14, end), blink-caret 0.6s step-end infinite;
+    }
+    
+    @media only screen and (max-width: 1210px) {
+        .heropic {
+            height: 80vh;
+        }
+    }
+    
+    @media only screen and (max-width: 910px) {
+        .heropic h1 {
+            font-size: 70px;
+        }
+    }
+    
+    @media only screen and (max-width: 830px) {
+        .heropic h1 {
+            font-size: 60px;
+        }
+    }
+    
+    @media only screen and (max-width: 680px) {
+        .heropic h1 {
+            font-size: 50px;
+        }
+    }
+    
+    @media only screen and (max-width: 580px) {
+        .heropic h1 {
+            font-size: 26px;
+        }
+    }
+    /* The typing effect */
+    
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 53%
+        }
+    }
+    /* The typewriter cursor effect */
+    
+    @keyframes blink-caret {
+        from,
+        to {
+            border-color: transparent
+        }
+        10% {
+            border-color: orange;
+        }
+    }
+    /* ---------------------------------------hero------------------------------------------ */
+    
+    .rundown {
+        width: 100%;
+        height: 85vh;
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)), url(pexels-engin-akyurt-1487713.jpg);
+        background-size: cover;
+        background-position: center;
+        background-color: white;
+        margin-top: -1px;
+    }
+    
+    .container {
+        padding: 7% 15% 7% 15%;
+    }
+    
+    .whatwedo {
+        display: inline-block;
+        margin-bottom: 2%;
+    }
+    
+    .more {
+        float: right;
+    }
+    
+    .do_des {
+        max-width: 75%;
+        margin-bottom: 5%;
+    }
+    
+    .flip {
+        display: inline-block;
+        width: 23%;
+        min-width: 200px;
+        text-align: center;
+        background-color: transparent;
+        perspective: 1000px;
+        height: 220px;
+    }
+    
+    .flip_inner {
+        padding-top: 20%;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.7s;
+        transform-style: preserve-3d;
+        box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .flip:hover .flip_inner {
+        transform: rotateY(180deg);
+    }
+    
+    .steps_front,
+    .steps_back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        top: 0;
+    }
+    
+    .steps_front {
+        color: black;
+    }
+    
+    .steps_back {
+        transform: rotateY(180deg);
+    }
+    
+    .procedure span {
+        font-size: 90px;
+        font-family: 'Sono', sans-serif;
+        display: block;
+        height: 180px;
+    }
+    
+    i {
+        color: black;
+    }
+    
+    .fabric {
+        font-size: 25px;
+    }
+    
+    .description {
+        font-weight: 600;
+    }
+    
+    .backpic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    @media only screen and (max-width: 1210px) {
+        .rundown {
+            height: 70vh;
+        }
+    }
+    
+    @media only screen and (max-width: 950px) {
+        .do_des {
+            display: none;
+        }
+        /* .do_des::after {
+            content: '我們專門生產合成面料，包括泳衣面料、泳衣襯裡、內衣、瑜伽服等。我們提供廣泛的面料選擇，也包括環保面料。我們自2014年起成為Speedo品牌的面料供應商...';
+        } */
+    }
+    
+    @media only screen and (max-width: 1225px) {
+        .container {
+            padding: 7% 10%;
+        }
+    }
+    
+    @media only screen and (max-width: 750px) {
+        .flip {
+            min-width: 50%;
+        }
+    }
+    
+    @media only screen and (max-width: 1075px) {
+        .procedure {
+            text-align: center;
+        }
+        .flip {
+            margin: 5% 5%;
+        }
+        .rundown {
+            height: auto;
+        }
+    }
+    
+    @media only screen and (max-width: 650px) {
+        .title {
+            text-align: center;
+        }
+        .flip {
+            display: block;
+            width: auto;
+            margin-bottom: 25%;
+        }
+    }
+    /* ---------------------------------------div.rundown------------------------------------------ */
+    
+    .data {
+        height: 60vh;
+        background-color: #f1d9d445;
+        padding: 5% 10% 1% 10%;
+        text-align: center;
+    }
+    
+    .annual {
+        width: 39%;
+        display: inline-block;
+        margin: 0 3%;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    .exp {
+        border-bottom: 1px solid #D3D3d3;
+        margin: 5% 0;
+    }
+    
+    .year {
+        display: inline;
+        font-family: 'Sono', sans-serif;
+        font-weight: 800;
+        font-size: 28px;
+        padding: 10px 35px;
+    }
+    
+    .award {
+        display: inline;
+        padding: 10px 25px;
+        font-size: 22px;
+    }
+    
+    @media only screen and (max-width: 1554px) {
+        .year {
+            display: inline;
+            font-family: 'Sono', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            padding: 10px 35px;
+        }
+        .award {
+            display: inline;
+            padding: 10px 23px;
+            font-size: 20px;
+        }
+    }
+    
+    @media only screen and (max-width: 1410px) {
+        .year {
+            display: inline;
+            font-family: 'Sono', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+            padding: 10px 30px;
+        }
+        .award {
+            display: inline;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    }
+    
+    @media only screen and (max-width: 1260px) {
+        .year {
+            display: inline;
+            font-family: 'Sono', sans-serif;
+            font-weight: 800;
+            font-size: 19px;
+            padding: 8px 25px;
+        }
+        .award {
+            display: inline;
+            padding: 8px 15px;
+            font-size: 18px;
+        }
+    }
+    
+    .datatitle {
+        height: 220px;
+    }
+    
+    .content {
+        width: 55%;
+        display: inline-block;
+        margin: 0 3%;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    .chest {
+        height: 250px;
+        padding: 5px;
+        border: 2px solid #adadad;
+        border-radius: 5px;
+    }
+    
+    .upper,
+    .lower {
+        height: 49%;
+    }
+    
+    .upper {
+        border-bottom: 1px solid #cdcdcd;
+    }
+    
+    .left,
+    .right {
+        width: 48%;
+        display: inline-block;
+    }
+    
+    .left {
+        border-right: 1px solid #cdcdcd;
+    }
+    
+    .num {
+        font-family: 'Sono', sans-serif;
+        display: inline;
+        font-size: 70px;
+    }
+    
+    .left span,
+    .right span {
+        font-size: 10px;
+    }
+    
+    .text {
+        font-weight: 700;
+    }
+    
+    @media only screen and (max-width: 1140px) {
+        .data {
+            height: auto;
+        }
+    }
+    
+    @media only screen and (max-width: 962px) {
+        .content {
+            width: 90%;
+            margin-bottom: 10%;
+        }
+        .datatitle {
+            height: auto;
+        }
+        .datacontent {
+            display: none;
+        }
+    }
+    
+    @media only screen and (max-width: 702px) {
+        .left,
+        .right {
+            margin-top: 2%;
+        }
+        .num {
+            font-size: 60px;
+        }
+    }
+    
+    @media only screen and (max-width: 630px) {
+        .left,
+        .right {
+            display: block;
+            width: auto;
+            margin: 5% 0;
+        }
+        .chest {
+            height: auto;
+        }
+        .left {
+            border-right: none;
+            border-bottom: 1px solid #cdcdcd;
+            padding-bottom: 5%;
+        }
+    }
+    /* ---------------------------------------div.data------------------------------------------ */
+    
+    .coop {
+        width: 100%;
+        height: 40vh;
+        background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)), url(pexels-arina-krasnikova-7002972.jpg);
+        background-size: cover;
+        background-position: top;
+        background-color: white;
+    }
+    
+    .ind {
+        text-align: center;
+        padding-top: 2%;
+    }
+    
+    .row {
+        text-align: center;
+        margin-top: 3%;
+    }
+    
+    .brand {
+        width: 160px;
+        margin: 0 20px 0 20px;
+    }
+    
+    @media only screen and (max-width: 1640px) {
+        .brand {
+            width: 160px;
+            margin: 10px 20px;
+        }
+        .coop {
+            height: 45vh;
+        }
+    }
+    
+    @media only screen and (max-width: 1554px) {
+        .row {
+            text-align: center;
+            margin-top: 3%;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .coop {
+            height: 48vh;
+        }
+    }
+    
+    @media only screen and (max-width: 919px) {
+        .coop {
+            height: auto;
+        }
+    }
+    
+    @media only screen and (max-width: 650px) {
+        h5 {
+            font-size: 30px;
+            word-spacing: 5px;
+            margin-top: 3%;
+        }
+        .more {
+            display: none;
+        }
+    }
+    /* ---------------------------------------div.coop------------------------------------------ */
+    
+    footer {
+        margin-top: -5px;
+        height: 6vh;
+        background-color: #F2EFE9;
+        justify-content: center;
+        text-align: center;
+        padding: 35px 100px 25px 100px;
+    }
+    
+    footer h1 {
+        font-size: 15px;
+        word-spacing: 15px;
+    }
+    
+    .info {
+        display: inline-block;
+        width: 80%;
+    }
+    
+    .info div {
+        display: inline-block;
+        width: 25%;
+    }
+    
+    .tel {
+        display: inline;
+    }
+    
+    .info span,
+    .info h1 {
+        font-size: 15px;
+    }
+    
+    @media only screen and (max-width: 1065px) {
+        .info span {
+            display: block;
+        }
+    }
+    /* ---------------------------------------footer------------------------------------------ */
