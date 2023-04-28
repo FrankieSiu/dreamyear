@@ -560,9 +560,9 @@
             display: none;
         }
     }
-    /* ---------------------------------------div.coop------------------------------------------ */
+        /* ---------------------------------------div.coop------------------------------------------ */
     
-    footer {
+    .contact {
         margin-top: -5px;
         height: 6vh;
         background-color: #F2EFE9;
@@ -571,9 +571,13 @@
         padding: 35px 100px 25px 100px;
     }
     
-    footer h1 {
+    .contact h1 {
         font-size: 15px;
         word-spacing: 15px;
+    }
+    
+    .contact div h1 {
+        display: inline;
     }
     
     .info {
@@ -595,9 +599,34 @@
         font-size: 15px;
     }
     
+    @media only screen and (max-width: 1300px) {
+        .contact {
+            height: auto;
+            padding: 0;
+        }
+        .info {
+            width: auto;
+        }
+    }
+    
     @media only screen and (max-width: 1065px) {
         .info span {
             display: block;
         }
     }
     /* ---------------------------------------footer------------------------------------------ */
+    /*---------------------------------------------------------contact page---------------------------------------------------------*/
+    
+    .describe {
+        font-size: 30px;
+        max-width: 70%;
+        line-height: 4.5rem;
+        margin-top: -100px;
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        .describe {
+            font-size: 20px;
+            line-height: 2.5rem;
+        }
+    }
